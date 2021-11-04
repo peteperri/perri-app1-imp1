@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ListEditorController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="List Editor" />
+      <TextField fx:id="descriptionField" layoutX="74.0" layoutY="61.0" prefHeight="34.0" prefWidth="206.0" promptText="What do you have to do?">
+         <padding>
+            <Insets left="14.0" right="14.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="dueDateField" layoutX="75.0" layoutY="123.0" prefHeight="34.0" prefWidth="206.0" promptText="YYYY-MM-DD">
+         <padding>
+            <Insets left="14.0" right="14.0" />
+         </padding>
+      </TextField>
+      <CheckBox fx:id="doneCheckBox" layoutX="102.0" layoutY="191.0" mnemonicParsing="false" text="Is it done yet? " />
+      <Label fx:id="infoLabel" alignment="CENTER" layoutX="60.0" layoutY="267.0" prefHeight="101.0" prefWidth="182.0" textAlignment="CENTER" textOverrun="CLIP" />
+      <Button fx:id="addItemButton" layoutX="119.0" layoutY="240.0" mnemonicParsing="false" onAction="#addItemButtonClicked" text="Add Item" />
+      <Text layoutX="417.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your To Do List" wrappingWidth="92.0" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your To Do List" />
+      <Button fx:id="exportButton" alignment="CENTER_RIGHT" layoutX="306.0" layoutY="379.0" mnemonicParsing="false" onAction="#exportButtonClicked" text="Save List..." />
+      <Button fx:id="importButton" alignment="CENTER_RIGHT" layoutX="388.0" layoutY="379.0" mnemonicParsing="false" onAction="#importButtonClicked" text="Import List..." />
+      <CheckBox fx:id="showCompletedCheckbox" layoutX="316.0" layoutY="420.0" mnemonicParsing="false" onAction="#showDoneChecked" text="Show All Completed">
+         <padding>
+            <Insets left="14.0" />
+         </padding>
+      </CheckBox>
+      <CheckBox fx:id="showIncompleteCheckbox" layoutX="488.0" layoutY="420.0" mnemonicParsing="false" onAction="#showNotDoneChecked" text="Show All Incomplete">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </CheckBox>
+      <Button fx:id="removeItemButton" layoutX="479.0" layoutY="379.0" mnemonicParsing="false" onAction="#removeItemButtonClicked" text="Remove Task" />
+      <Button fx:id="clearListButton" layoutX="573.0" layoutY="379.0" mnemonicParsing="false" onAction="#clearListButtonClicked" text="Clear Tasks" />
+      <Label layoutX="27.0" layoutY="70.0" text="Task:" />
+      <Label layoutX="14.0" layoutY="131.0" text="Due Date:" />
+      <Label layoutX="125.0" layoutY="9.0" text="List Editor" />
+      <TableView fx:id="listView" editable="true" layoutX="306.0" layoutY="32.0" prefHeight="336.0" prefWidth="346.0">
+         <placeholder>
+            <Label prefHeight="18.0" prefWidth="218.0" text="No tasks. Try adding or importing some!" />
+         </placeholder>
+        <columns>
+          <TableColumn fx:id="taskView" prefWidth="152.79998779296875" text="Task" />
+          <TableColumn fx:id="dueDateView" prefWidth="111.199951171875" text="DueDate" />
+            <TableColumn fx:id="doneView" prefWidth="81.5999755859375" text="Done?" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
