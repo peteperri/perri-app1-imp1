@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ItemTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2021-11-05T05:56:03" hostname="LAPTOP-KOS94M5H" time="0.05">
+  <properties/>
+  <testcase name="testItemCount()" classname="ItemTest" time="0.032"/>
+  <testcase name="getCompleted()" classname="ItemTest" time="0.001"/>
+  <testcase name="getDueDate()" classname="ItemTest" time="0.002"/>
+  <testcase name="testToString()" classname="ItemTest" time="0.006"/>
+  <testcase name="getToDoList()" classname="ItemTest" time="0.001"/>
+  <testcase name="setCompleted()" classname="ItemTest" time="0.0"/>
+  <testcase name="setDescription()" classname="ItemTest" time="0.001"/>
+  <testcase name="setDueDate()" classname="ItemTest" time="0.001"/>
+  <testcase name="removeFromList()" classname="ItemTest" time="0.001"/>
+  <testcase name="getDescription()" classname="ItemTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

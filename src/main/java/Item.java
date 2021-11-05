@@ -10,7 +10,7 @@ public class Item {
 
     private String description;
     private String dueDate;
-    private boolean completed = false;
+    private boolean completed;
     private final Validator validator = new Validator();
 
     //static list to hold all instances of Items
@@ -32,7 +32,7 @@ public class Item {
 
     public String toString() {
         //str will be a String that contains all the information about an item
-        //only for debugging purposes, shouldn't be used in final app
+        //only for debugging and test purposes, shouldn't be used in final app
         return "Description: " + description + "\nDueDate: " + dueDate + "\nCompleted: " + completed;
     }
 
@@ -76,10 +76,5 @@ public class Item {
         toDoList.remove(item);
     }
 
-    //test
-    public static void clearToDoList(){
-        //clear all items from the toDoList
-        toDoList.clear();
-    }
 
 }

@@ -3,8 +3,8 @@
  *  Copyright 2021 Peter Perri
  */
 
+//all functions in this class are implicitly tested in ItemTest.java
 public class Validator {
-
 
     //validate an item's due date fits the format and is a valid date
     public boolean validateDueDate(String dueDate) {

@@ -1,0 +1,74 @@
+@startuml
+'https://plantuml.com/class-diagram
+
++class TodoListApplication{
++void start(Stage primaryStage)
++void main(String[] args)
+}
+
++class Item{
+-String description
+-String dueDate
+-boolean completed
+-Validator validator
+- {static} ArrayList<Item> toDoList
++Item(String description, String dueDate, boolean completed)
++String toString()
++void setDescription(String description)
++void setDueDate(String dueDate)
++void setCompleted(boolean completed)
++String getDescription()
++String getDueDate()
++boolean getCompleted()
++{static} List<Item> getToDoList()
++{static} void removeFromList(Item item)
+}
+
++class ListEditorController{
+-TextField descriptionField
+-CheckBox doneCheckBoxChecked
+-TextField dueDateField
+-Label infoLabel
+-CheckBox showCompletedCheckBox
+-CheckBox showIncompleteCheckBox
+-TableColumn<Item, Boolean> doneView
+-TableColumn<Item, String> dueDateView
+-TableColumn<Item, String> taskView
+-TableView<Item, String> listView
+-int index
+void initialize()
+void addItemButtonClicked(ActionEvent event)
+void clearListButtonClicked(ActionEvent event)
+void exportButtonClicked(ActionEvent event)
++void exportToDoList(File selectedFile)
+void importButtonClicked(ActionEvent event)
++void importToDoList(File selectedFile)
+void removeItemButtonClicked(ActionEvent event)
+void showDoneChecked(ActionEvent event)
+void showNotDoneChecked(ActionEvent event)
++void populateCompleteOrIncompleteList(boolean completed)
+-void uncheck()
+-void clear()
+-void displayItem()
++void createItem()
++void addItemToList(String description, String dueDate, boolean isChecked)
+-void addAndDisplayItem(String description, String dueDate, boolean completed)
+-void validateDuplicates()
++void removeItemFromList()
+}
+
++class Validator{
++boolean validateDueDate(String dueDate)
++boolean validateDescription(String description)
+-boolean validateDueDateAlphabetic(String dueDate)
+-boolean validateDueDateNumeric(String dueDate)
+}
+
+
+TodoListApplication -- "launches" ListEditorController
+ListEditorController --* "edits and displays" Item
+ListEditorController --* "uses methods from" Validator
+Item --* "uses methods from" Validator
+
+
+@enduml

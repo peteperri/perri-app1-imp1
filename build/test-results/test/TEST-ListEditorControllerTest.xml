@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ListEditorControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-11-05T05:56:03" hostname="LAPTOP-KOS94M5H" time="0.022">
+  <properties/>
+  <testcase name="populateCompleteOrIncompleteListTest()" classname="ListEditorControllerTest" time="0.01"/>
+  <testcase name="importExportTest()" classname="ListEditorControllerTest" time="0.01"/>
+  <testcase name="addItemToListTest()" classname="ListEditorControllerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
